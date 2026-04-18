@@ -432,10 +432,12 @@ body {
   max-width: var(--w);
   margin: 0 auto;
   padding: 0 1.75rem 5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .snake-svg {
-  width: 100%;
+  max-width: 100%;
   border-radius: var(--r-lg);
   display: block;
   filter: drop-shadow(0 0 18px rgba(76,201,240,.18));
