@@ -1,22 +1,53 @@
-### Blog Mbmaciel
-Desenvolvimento de sistemas web e aplicativos desde 2008. Visite o website [mbmaciel.com](https://mbmaciel.com) para mais detalhes.
+---
+layout: home
+title: Blog
+---
 
-### Desenvolvimento de Aplicativos Nativos vs. Aplicativos Híbridos: Qual é a melhor escolha para o seu projeto?
-Com o crescente uso de smartphones e tablets, o desenvolvimento de aplicativos móveis tornou-se uma parte essencial para empresas e empreendedores. Ao considerar a criação de um aplicativo móvel, surge a pergunta: qual a melhor abordagem a ser utilizada?.... [continua](hibrido-nativo)
+<div class="articles-grid">
 
-### Sites responsivos
-Atualmente a maioria dos usuários usa celular ou tablet para acessar a internet. Por isso não existe mais site responsivo, existe apenas site. É praticamente obrigatório ter um site que funcione corretamente em ambientes móveis.... [continua](responsivos)
+  <a href="hibrido-nativo" class="article-card">
+    <span class="card-tag">Mobile Dev</span>
+    <span class="card-title">Nativo vs. Híbrido: Qual é a Melhor Escolha para o Seu App?</span>
+    <span class="card-excerpt">Com o crescente uso de smartphones, surge a pergunta: desenvolvimento nativo ou híbrido? Explore as diferenças e tome uma decisão informada para o seu projeto.</span>
+    <div class="card-footer">
+      <span class="card-read">Ler artigo <span class="card-arrow">→</span></span>
+    </div>
+  </a>
 
-### Orçamento de serviços
-Para saber um valor de um serviço é necessário que o desenvolvedor tenha o máximo de informações de uma projeto..... [continua](orcamento)
+  <a href="responsivos" class="article-card">
+    <span class="card-tag">Web Dev</span>
+    <span class="card-title">Sites Responsivos: Não é Mais Diferencial, é Obrigação</span>
+    <span class="card-excerpt">A maioria dos usuários acessa a internet pelo celular. Hoje não existe mais "site responsivo" — existe apenas site. A mobilidade deixou de ser opcional.</span>
+    <div class="card-footer">
+      <span class="card-read">Ler artigo <span class="card-arrow">→</span></span>
+    </div>
+  </a>
 
-### Sites seguros
-O protocolo HTTPS vai se tornando um padrão na internet e a Google sabe disso. Examente por este ponto, a companhia anunciou que vai retirar a palavra “seguro” que aparece na barra de link quando você navega em sites com o protocolo....[continua](site-seguro)
+  <a href="orcamento" class="article-card">
+    <span class="card-tag">Freelancing</span>
+    <span class="card-title">Como Funciona um Orçamento de Serviços de Desenvolvimento</span>
+    <span class="card-excerpt">Para estimar um projeto com precisão, o desenvolvedor precisa conhecer objetivo, recursos, integrações e características. Entenda o processo.</span>
+    <div class="card-footer">
+      <span class="card-read">Ler artigo <span class="card-arrow">→</span></span>
+    </div>
+  </a>
 
-### As Melhores Linguagens de Programação para Iniciar sua Jornada no Desenvolvimento
-Introdução: Se você está pensando em começar a programar ou apenas quer saber quais as melhores linguagens de programação para aprender, este artigo é para você .... [continua](melhor-linguagem)
+  <a href="site-seguro" class="article-card">
+    <span class="card-tag">Segurança</span>
+    <span class="card-title">HTTPS: Por Que o Protocolo Seguro Virou Padrão na Web</span>
+    <span class="card-excerpt">O Google já marca sites sem HTTPS como "Não é seguro". Entenda o que isso significa para o seu projeto e para a confiança dos seus usuários.</span>
+    <div class="card-footer">
+      <span class="card-read">Ler artigo <span class="card-arrow">→</span></span>
+    </div>
+  </a>
 
+  <a href="melhor-linguagem" class="article-card">
+    <span class="card-tag">Dev Career</span>
+    <span class="card-title">As Melhores Linguagens para Iniciar sua Jornada no Dev</span>
+    <span class="card-excerpt">Pensando em começar a programar? Exploramos Python, JavaScript, Java, C# e Ruby — e quando escolher cada uma dependendo do seu objetivo.</span>
+    <div class="card-footer">
+      <span class="card-read">Ler artigo <span class="card-arrow">→</span></span>
+    </div>
+  </a>
 
-<iframe height='160' width='220' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/187728/activity-summary/6915f7dadbc4c53dbfd30ff2c704ff9cde2a15c1'></iframe> | <a href="https://www.freelancermap.com/freelancers-directory/freelancer-profiles/development/76305-profil-mauricio-maciel-aus-rio-de-janeiro.html" target="_blank" title="Profile of Mauricio Maciel on www.freelancermap.com"> <img src="https://www.freelancermap.com/images/widgets/button/square-64.png"></a>
-                    
-
+</div>

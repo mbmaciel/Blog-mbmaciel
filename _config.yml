@@ -1,31 +1,10 @@
-title: Mbmaciel.GitHub.com
-description: Blog
-google_analytics: 
-show_downloads: false
-theme: jekyll-theme-tactile
+title: mbmaciel
+description: Desenvolvimento de sistemas web e aplicativos desde 2008
+url: "https://blog.mbmaciel.com"
 
-navbar-links:
-  About Me: "aboutme"
-  
-# Change all these values or delete the ones you don't want.
-# Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Mauricio Maciel
+  email: me@mbmaciel.com
 
-# Select your active Social Network Links.
-# Uncomment the links you want to show in the footer and add your information to each link.
-# You can reorder the items to define the link order.
-# If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
-social-network-links:
-  email: "me@mbmaciel.com"
-  facebook: mbmacielcom
-  github: mbmaciel
-  twitter: mbmaciel
-  
-share-links-active:
-  twitter: true
-  facebook: true
-  github: true
-
-gems:
+plugins:
   - jekyll-mentions
