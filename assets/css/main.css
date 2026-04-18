@@ -426,18 +426,20 @@ body {
   gap: .65rem;
 }
 
-/* ── WIDGETS ─────────────────────────────── */
+/* ── SNAKE ───────────────────────────────── */
 
-.widgets-row {
+.snake-wrap {
   max-width: var(--w);
   margin: 0 auto;
   padding: 0 1.75rem 5rem;
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
 }
-.widgets-row iframe { border-radius: var(--r); }
+
+.snake-svg {
+  width: 100%;
+  border-radius: var(--r-lg);
+  display: block;
+  filter: drop-shadow(0 0 18px rgba(76,201,240,.18));
+}
 
 /* ── READING BAR ─────────────────────────── */
 
