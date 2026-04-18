@@ -50,4 +50,13 @@ title: Blog
     </div>
   </a>
 
+  <a href="otimizacao-prematura" class="article-card">
+    <span class="card-tag">Boas Práticas</span>
+    <span class="card-title">A Otimização Prematura é a Raiz de Todo Mal</span>
+    <span class="card-excerpt">Donald Knuth disse que otimização prematura é a raiz de todo mal. Entenda por que lançar primeiro e otimizar depois é quase sempre a decisão certa.</span>
+    <div class="card-footer">
+      <span class="card-read">Ler artigo <span class="card-arrow">→</span></span>
+    </div>
+  </a>
+
 </div>
