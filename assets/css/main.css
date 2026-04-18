@@ -302,16 +302,93 @@ body {
   background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
 }
 
-/* ── ARTICLE GRID ────────────────────────── */
+/* ── CAROUSEL ────────────────────────────── */
 
-.articles-grid {
+.carousel-outer {
+  position: relative;
   max-width: var(--w);
   margin: 0 auto;
-  padding: 0 1.75rem 4rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-  gap: 1.25rem;
+  padding: 0 3.25rem 1rem;
 }
+
+.carousel-viewport {
+  overflow: hidden;
+}
+
+.articles-grid {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform .45s var(--ease);
+  will-change: transform;
+}
+
+.article-card {
+  flex: 0 0 calc((100% - 2 * 1.25rem) / 3);
+  min-width: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% - 1.5rem));
+  z-index: 10;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-h);
+  background: rgba(10,5,24,.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color       .2s var(--ease),
+    border-color .2s var(--ease),
+    background  .2s var(--ease),
+    box-shadow  .2s var(--ease),
+    transform   .2s var(--spring);
+  padding: 0;
+}
+.carousel-btn:hover {
+  color: var(--pink);
+  border-color: rgba(247,37,133,.35);
+  background: rgba(247,37,133,.08);
+  box-shadow: 0 0 22px rgba(247,37,133,.28);
+  transform: translateY(calc(-50% - 1.5rem)) scale(1.08);
+}
+.carousel-btn:disabled {
+  opacity: .25;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel-prev { left: 0; }
+.carousel-next { right: 0; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .55rem;
+  padding: 1.5rem 0 3.5rem;
+}
+.carousel-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--border-h);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s var(--ease), transform .2s var(--spring), box-shadow .2s var(--ease);
+}
+.carousel-dot.active {
+  background: var(--pink);
+  transform: scale(1.5);
+  box-shadow: 0 0 8px var(--pink);
+}
+
+/* ── ARTICLE GRID ────────────────────────── */
 
 .article-card {
   position: relative;
@@ -713,9 +790,24 @@ body {
 
   .section-header { padding: 0 1.25rem 1.25rem; }
 
+  .carousel-outer {
+    padding: 0 1.25rem 0;
+  }
+  .carousel-btn { display: none; }
+  .carousel-viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .carousel-viewport::-webkit-scrollbar { display: none; }
   .articles-grid {
-    grid-template-columns: 1fr;
-    padding: 0 1.25rem 3rem;
+    transform: none !important;
+    transition: none;
+  }
+  .article-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
   }
 
   .article-wrap { padding: 0 1.25rem; }

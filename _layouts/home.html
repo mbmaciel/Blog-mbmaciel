@@ -33,3 +33,65 @@ layout: default
        alt="GitHub contribution snake animation"
        class="snake-svg">
 </div>
+
+<script>
+(function () {
+  var outer    = document.querySelector('.carousel-outer');
+  if (!outer) return;
+  var track    = outer.querySelector('.articles-grid');
+  var cards    = Array.from(track.querySelectorAll('.article-card'));
+  var prevBtn  = outer.querySelector('.carousel-prev');
+  var nextBtn  = outer.querySelector('.carousel-next');
+  var dotsWrap = outer.querySelector('.carousel-dots');
+
+  var VISIBLE = 3;
+  var total   = cards.length;
+  var maxIdx  = Math.max(0, total - VISIBLE);
+  var current = 0;
+
+  for (var i = 0; i <= maxIdx; i++) {
+    var d = document.createElement('button');
+    d.className = 'carousel-dot';
+    d.setAttribute('aria-label', 'Página ' + (i + 1));
+    (function (idx) {
+      d.addEventListener('click', function () { goTo(idx); });
+    })(i);
+    dotsWrap.appendChild(d);
+  }
+
+  function getOffset() {
+    var gap = parseFloat(getComputedStyle(track).gap) || 20;
+    return current * (cards[0].offsetWidth + gap);
+  }
+
+  function update() {
+    track.style.transform = 'translateX(-' + getOffset() + 'px)';
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === maxIdx;
+    dotsWrap.querySelectorAll('.carousel-dot').forEach(function (dot, i) {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  function goTo(i) {
+    current = Math.max(0, Math.min(i, maxIdx));
+    update();
+  }
+
+  prevBtn.addEventListener('click', function () { goTo(current - 1); });
+  nextBtn.addEventListener('click', function () { goTo(current + 1); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(update, 100);
+  });
+
+  update();
+})();
+</script>
