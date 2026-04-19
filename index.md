@@ -65,6 +65,15 @@ title: Blog
         </div>
       </a>
 
+      <a href="como-llms-funcionam" class="article-card">
+        <span class="card-tag">Inteligência Artificial</span>
+        <span class="card-title">Por Trás do Código: Como as LLMs Realmente Funcionam?</span>
+        <span class="card-excerpt">Tokenização, embeddings, atenção, transformers e alucinações: entenda a matemática por trás dos modelos de linguagem que estão mudando a forma como interagimos com computadores.</span>
+        <div class="card-footer">
+          <span class="card-read">Ler artigo <span class="card-arrow">→</span></span>
+        </div>
+      </a>
+
       <a href="ux-ui-design" class="article-card">
         <span class="card-tag">Design</span>
         <span class="card-title">UX e UI Design: Qual é a Diferença Entre as Duas Disciplinas?</span>
